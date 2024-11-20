@@ -89,6 +89,8 @@ Para ejecutar el servidor de desarrollo de Laravel:
 
 ```bash
 cd src-api
+composer require laravel/sanctum
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider" # Dependencia para Configurar CORS, para que se conencten el backend y frotend
 php artisan serve
 ```
 
@@ -112,3 +114,6 @@ npm run build
 npm install -g serve
 serve -s build
 ```
+
+### Deploy
+Crear fichero .env
