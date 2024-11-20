@@ -33,9 +33,87 @@ pueblos o incluso campos de categorías mayores, donde sus prestaciones son mayo
 
 ## Estructura del Proyecto
 
-    src-api (Springboot)
+    src-api (Laravel)
     src-frontend (React)
     docs
     README.md
 
 
+## Requisitos
+
+- PHP >= 7.3
+- Composer
+- Node.js
+- npm
+
+## Instalación
+
+### Backend (Laravel)
+
+1. Instalar Composer (si no está instalado):
+
+    ```bash
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php composer-setup.php
+    php -r "unlink('composer-setup.php');"
+    mv composer.phar /usr/local/bin/composer
+    ```
+
+2. Crear un nuevo proyecto de Laravel:
+
+    ```bash
+    cd src-api
+    composer create-project --prefer-dist laravel/laravel .
+    ```
+
+### Frontend (React)
+
+1. Instalar Node.js y npm (si no están instalados):
+
+    ```bash
+    # Descargar e instalar Node.js y npm desde https://nodejs.org/
+    ```
+
+2. Crear una nueva aplicación de React:
+
+    ```bash
+    cd ../src-frontend
+    npx create-react-app .
+    ```
+
+## Ejecución del Proyecto
+
+### Backend
+
+Para ejecutar el servidor de desarrollo de Laravel:
+
+```bash
+cd src-api
+composer require laravel/sanctum
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider" # Dependencia para Configurar CORS, para que se conencten el backend y frotend
+php artisan serve
+```
+
+
+### Frontend
+
+Para ejecutar el servidor de React:
+
+```bash
+
+cd src-frontend
+npm install # Depencia
+npm audit fix --force
+
+npm start
+```
+Paa ejecutar el servidor de React como Producion
+
+```bash
+npm run build
+npm install -g serve
+serve -s build
+```
+
+### Deploy
+Crear fichero .env
