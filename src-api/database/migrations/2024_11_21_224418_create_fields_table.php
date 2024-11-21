@@ -15,8 +15,8 @@ class CreateFieldsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->string('location')->nullable();
             $table->string('directions')->nullable(); # Direccion del campo
+            $table->string('location')->nullable();
             $table->decimal('price_per_hour', 8, 2);
             $table->timestamps();
         });
