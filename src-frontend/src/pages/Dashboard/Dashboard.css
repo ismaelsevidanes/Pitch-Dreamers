@@ -1,0 +1,42 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    overflow: hidden; /* Evita scroll innecesario */
+  }
+  
+  .sidebar {
+    width: 250px; /* Define un ancho fijo para el sidebar */
+    background-color: #004AAD;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .content {
+    flex: 1; /* Toma todo el espacio restante */
+    background-color: #ffffff;
+    padding: 20px;
+    overflow-y: auto; /* Permite el scroll en el contenido si es necesario */
+  }
+  
+  .content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  

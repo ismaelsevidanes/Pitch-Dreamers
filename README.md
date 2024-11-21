@@ -110,10 +110,13 @@ npm start
 Paa ejecutar el servidor de React como Producion
 
 ```bash
+npm install react-router-dom # Dependencia
+
 npm run build
 npm install -g serve
 serve -s build
 ```
+
 
 ### Deploy
 Crear fichero .env

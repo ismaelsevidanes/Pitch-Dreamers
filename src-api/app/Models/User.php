@@ -45,4 +45,16 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+   // Relación muchos a muchos con Reservation
+   public function reservations()
+   {
+       return $this->belongsToMany(Reservation::class, 'reservation_user');
+   }
+
+   // Relación muchos a muchos con Field
+   public function fields()
+   {
+       return $this->belongsToMany(Field::class, 'field_user');
+   }
 }
