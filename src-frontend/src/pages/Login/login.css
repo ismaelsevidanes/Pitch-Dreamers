@@ -1,0 +1,113 @@
+/* Login.css */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #bacefd;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 100px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.social-buttons .btn {
+  background-color: #bacefd;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.or-divider {
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.btn.login-btn {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.additional-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.link {
+  color: #004aad;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: white;
+  padding: 20px;
+  border-top: 2px solid black;
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+}
