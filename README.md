@@ -91,6 +91,10 @@ Para ejecutar el servidor de desarrollo de Laravel:
 cd src-api
 composer require laravel/sanctum
 php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider" # Dependencia para Configurar CORS, para que se conencten el backend y frotend
+
+composer require laravel/breeze --dev # Dependencia  Laravel Breeze es una implementación simple de autenticación que incluye registro, inicio de sesión, y restablecimiento de contraseña.
+php artisan breeze:install
+
 php artisan serve
 ```
 
@@ -111,6 +115,7 @@ Paa ejecutar el servidor de React como Producion
 
 ```bash
 npm install react-router-dom # Dependencia
+npm install axios # Dependencia para las solicitudes HTTP:
 
 npm run build
 npm install -g serve
