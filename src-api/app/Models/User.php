@@ -6,11 +6,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -38,23 +38,20 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+    ];
+
+    // Relación muchos a muchos con Reservation
+    public function reservations()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->belongsToMany(Reservation::class, 'reservation_user');
     }
 
-   // Relación muchos a muchos con Reservation
-   public function reservations()
-   {
-       return $this->belongsToMany(Reservation::class, 'reservation_user');
-   }
-
-   // Relación muchos a muchos con Field
-   public function fields()
-   {
-       return $this->belongsToMany(Field::class, 'field_user');
-   }
+    // Relación muchos a muchos con Field
+    public function fields()
+    {
+        return $this->belongsToMany(Field::class, 'field_user');
+    }
 }

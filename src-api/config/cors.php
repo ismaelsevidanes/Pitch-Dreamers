@@ -15,22 +15,13 @@ return [
     |
     */
 
-    ## Permite hacer solicitudes desde el puerto 3000 de localhost al backend de Laravel
-
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
-
     'allowed_methods' => ['*'],
-
     'allowed_origins' => ['http://localhost:3000'],
-
     'allowed_origins_patterns' => [],
-
     'allowed_headers' => ['*'],
-
     'exposed_headers' => [],
-
     'max_age' => 0,
-
     'supports_credentials' => true,
 
 ];

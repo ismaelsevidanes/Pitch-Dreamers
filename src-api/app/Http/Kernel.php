@@ -1,8 +1,16 @@
 <?php
 
-use Illuminate\Foundation\Http\Kernel as HttpKernel;
+namespace App\Http;
 
-class Kernel extends HttpKernel {
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+class Kernel extends HttpKernel
+{
+
+    protected $middleware = [
+        \Illuminate\Http\Middleware\HandleCors::class,
+        \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+    ];
+
     protected $middlewareGroups = [
         'api' => [
             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
@@ -11,4 +19,4 @@ class Kernel extends HttpKernel {
         ],
     ];
 }
-?>
+

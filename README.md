@@ -93,7 +93,8 @@ composer require laravel/sanctum
 php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider" # Dependencia para Configurar CORS, para que se conencten el backend y frotend
 
 composer require laravel/breeze --dev # Dependencia  Laravel Breeze es una implementación simple de autenticación que incluye registro, inicio de sesión, y restablecimiento de contraseña.
-php artisan breeze:install
+php artisan breeze:install api
+
 
 php artisan serve
 ```
