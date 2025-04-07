@@ -33,7 +33,7 @@ pueblos o incluso campos de categorías mayores, donde sus prestaciones son mayo
 
 ## Estructura del Proyecto
 
-    src-api (Springboot)
+    src-api (php laravel)
     src-frontend (React)
     docs
     README.md
